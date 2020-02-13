@@ -53,41 +53,63 @@ let middleImg = document.getElementById('middle-img');
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
 // Nav
-const topNav = document.querySelectorAll('nav a');
-topNav[0].textContent = 'Services';
-topNav[1].textContent = 'Product';
-topNav[2].textContent = 'Vision';
-topNav[3].textContent = 'Features';
-topNav[4].textContent = 'About';
-topNav[5].textContent = 'Contact';
+let topNav = document.querySelectorAll('nav a');
+topNav[0].textContent = siteContent['nav']['nav-item-1'];
+topNav[1].textContent = siteContent['nav']['nav-item-2'];
+topNav[2].textContent = siteContent['nav']['nav-item-3'];
+topNav[3].textContent = siteContent['nav']['nav-item-4'];
+topNav[4].textContent = siteContent['nav']['nav-item-5'];
+topNav[5].textContent = siteContent['nav']['nav-item-6'];
+
+// Nav styling
+for (i = 0; i < topNav.length; i++) {
+  topNav[i].style.color = 'green';
+}
+
+// New nav items
+let addNav = document.querySelector('nav')
+
+let newNav1 = document.createElement('a')
+newNav1.textContent = 'Home'
+newNav1.href = '#'
+newNav1.style.color = 'green'
+addNav.prepend(newNav1)
+
+let newNav2 = document.createElement('a')
+newNav2.textContent = 'Blog'
+newNav2.href = '#'
+newNav2.style.color = 'green'
+addNav.appendChild(newNav2)
 
 // CTA
 let mainTag = document.querySelector('h1');
-mainTag.textContent = 'DOM IS AWESOME';
+mainTag.textContent = siteContent['cta']['h1'];
 
 let mainBtn = document.querySelector('button');
-mainBtn.textContent = 'Get Started';
+mainBtn.textContent = siteContent['cta']['button'];
 
 // Main-Content
 let artHeaders = document.querySelectorAll('h4');
-artHeaders[0].textContent = 'Features';
-artHeaders[1].textContent = 'About';
-artHeaders[2].textContent = 'Services';
-artHeaders[3].textContent = 'Product';
-artHeaders[4].textContent = 'Vision';
-artHeaders[5].textContent = 'Contact';
+artHeaders[0].textContent = siteContent['main-content']['features-h4'];
+artHeaders[1].textContent = siteContent['main-content']['about-h4'];
+artHeaders[2].textContent = siteContent['main-content']['services-h4'];
+artHeaders[3].textContent = siteContent['main-content']['product-h4'];
+artHeaders[4].textContent = siteContent['main-content']['vision-h4'];
 
 let artPara = document.querySelectorAll('section p');
-artPara[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-artPara[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-artPara[2].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-artPara[3].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-artPara[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-artPara[5].textContent = '123 Way 456 Street Somewhere, USA';
-artPara[6].textContent = '1 (888) 888-8888';
-artPara[7].textContent = 'Sales@greatidea.io';
+artPara[0].textContent = siteContent['main-content']['features-content'];
+artPara[1].textContent = siteContent['main-content']['about-content'];
+artPara[2].textContent = siteContent['main-content']['services-content'];
+artPara[3].textContent = siteContent['main-content']['product-content'];
+artPara[4].textContent = siteContent['main-content']['vision-content'];
+
+// Contact
+artHeaders[5].textContent = siteContent['contact']['contact-h4'];
+artPara[5].textContent = siteContent['contact']['address'];
+artPara[6].textContent = siteContent['contact']['phone'];
+artPara[7].textContent = siteContent['contact']['email'];
 
 // Footer
 
 let copyright = document.querySelector('footer p');
-copyright.textContent = 'Copyright Great Idea! 2018';
+copyright.textContent = siteContent['footer']['copyright'];
