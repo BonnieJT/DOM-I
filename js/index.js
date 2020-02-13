@@ -113,3 +113,26 @@ artPara[7].textContent = siteContent['contact']['email'];
 
 let copyright = document.querySelector('footer p');
 copyright.textContent = siteContent['footer']['copyright'];
+
+// Stretch - Styling Updates
+document.body.style.backgroundColor = 'lightblue';
+mainTag.style.color = 'purple';
+
+artHeaders[0].style.fontSize = '1rem';
+artHeaders[1].style.fontSize = '1rem';
+artHeaders[2].style.fontSize = '1rem';
+artHeaders[3].style.fontSize = '1rem';
+artHeaders[4].style.fontSize = '1rem';
+
+artHeaders[5].style.textAlign = 'center';
+artHeaders[5].style.color = 'darkblue';
+artHeaders[5].style.fontSize = '1.5rem';
+artPara[5].style.textAlign = 'center';
+artPara[5].style.color = 'darkblue';
+artPara[5].style.fontWeight = '700';
+artPara[6].style.textAlign = 'center';
+artPara[6].style.color = 'darkblue';
+artPara[6].style.fontWeight = '700';
+artPara[7].style.textAlign = 'center';
+artPara[7].style.color = 'darkblue';
+artPara[7].style.fontWeight = '700';
